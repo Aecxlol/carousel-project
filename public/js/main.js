@@ -24,7 +24,7 @@ function next(prevOrNextValue){
     }
 }
 
-//A chaque appui sur un des points, je lance la fonction showSlides qui va afficher l'image en fonction du points
+//A chaque appui sur un des points, je lance la fonction showSlides qui va afficher l'image en fonction du point
 function dotFunc(dotNumber){
     return function(){
         showSlides(index = dotNumber);
@@ -74,9 +74,6 @@ function showSlides(prevOrNextValue){
     //On récupère les div item-image
     let items = document.getElementsByClassName("item-image");
 
-    //On récupère nos points
-    //let dots = document.getElementsByTagName("span");
-
     //Si notre index vaut plus que le nombre d'images à afficher alors il revient à la première image
     if(prevOrNextValue > items.length){
         index = 1;
@@ -87,7 +84,7 @@ function showSlides(prevOrNextValue){
         index = items.length;
     }
 
-    //Par défaut on affiche aucun image
+    //Par défaut on affiche aucune image
     for(let i = 0; i < items.length; i++){
         items[i].style.display = "none";
     }
